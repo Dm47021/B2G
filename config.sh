@@ -85,6 +85,11 @@ case "$1" in
 	repo_sync optimus-f6-kk
 	;;
 
+"cm_f6mt")
+	echo DEVICE=f6mt >> .tmp-config &&
+	repo_sync optimus-f6-kk-cm11
+	;;
+
 "galaxy-nexus")
 	echo DEVICE=maguro >> .tmp-config &&
 	repo_sync $1
