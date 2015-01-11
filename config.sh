@@ -82,7 +82,7 @@ case "$1" in
 
 "f6mt")
 	echo DEVICE=f6mt >> .tmp-config &&
-	repo_sync $1
+	repo_sync optimus-f6-kk
 	;;
 
 "galaxy-nexus")
