@@ -30,7 +30,7 @@ case `uname` in
 	exit -1
 esac
 
-GITREPO=${GITREPO:-"git://github.com/mozilla-b2g/b2g-manifest"}
+GITREPO=${GITREPO:-"git://github.com/Dm47021/b2g-manifest"}
 BRANCH=${BRANCH:-master}
 
 while [ $# -ge 1 ]; do
@@ -77,6 +77,11 @@ echo DEVICE_NAME=$1 >> .tmp-config
 case "$1" in
 "galaxy-s2")
 	echo DEVICE=galaxys2 >> .tmp-config &&
+	repo_sync $1
+	;;
+
+"f6mt")
+	echo DEVICE=f6mt >> .tmp-config &&
 	repo_sync $1
 	;;
 
